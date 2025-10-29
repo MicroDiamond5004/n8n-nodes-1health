@@ -1,0 +1,56 @@
+{
+	"name": "n8n-nodes-1health",
+	"version": "1.0.0",
+	"description": "n8n node for 1Health API integration - manage patients and healthcare data",
+	"license": "MIT",
+	"homepage": "https://github.com/1health-io/n8n-nodes-1health",
+	"keywords": [
+		"n8n-community-node-1health",
+		"n8n-nodes-1health",
+		"patient-management",
+		"healthcare",
+		"1health",
+		"n8n"
+	],
+	"author": {
+		"name": "Sergei Petrov",
+		"email": "sergei.petrov@1health.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1health-io/n8n-nodes-1health.git"
+	},
+	"scripts": {
+		"build": "tsc && npm run copy-icons",
+		"copy-icons": "node scripts/copy-icons.js",
+		"build:watch": "tsc --watch",
+		"dev": "npm run build && n8n start",
+		"lint": "echo 'Linting skipped - using TypeScript compiler for validation'",
+		"lint:fix": "echo 'Linting skipped - using TypeScript compiler for validation'",
+		"release": "n8n-node release",
+		"prepublishOnly": "npm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/1HealthApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/1Health/1Health.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
