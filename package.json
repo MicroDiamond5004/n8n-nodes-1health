@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "n8n node for 1Health API integration - manage patients and healthcare data",
 	"license": "MIT",
-	"homepage": "https://github.com/1health-io/n8n-nodes-1health",
+	"homepage": "https://github.com/MicroDiamond5004/n8n-nodes-1health",
 	"keywords": [
 		"n8n-community-node-1health",
 		"n8n-nodes-1health",
@@ -18,7 +18,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/1health-io/n8n-nodes-1health.git"
+		"url": "https://github.com/MicroDiamond5004/n8n-nodes-1health.git"
 	},
 	"scripts": {
 		"build": "tsc && npm run copy-icons",
